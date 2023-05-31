@@ -1,0 +1,39 @@
+services:
+  - docker:dind
+
+stages:
+  - build_bazel_docker_container
+  - build_bazel_project
+
+build_bazel_docker_container:
+  stage: build_bazel_docker_container
+  variables:
+    CHILD_PIPELINE_EXECUTION_CONTEXT: "bazel_docker_container"
+  trigger:
+    include: .sub-gitlab-ci.yml
+    strategy: depend
+  rules:
+    - if: $SERVICE == "all"
+    - if: $SERVICE == "bazel_docker_container"
+    - changes:
+        - bazel_docker_container/**/*
+
+build_bazel_project:
+  stage: build_bazel_project
+  image:
+    name: ${CI_REGISTRY_IMAGE}/bazel_docker_container:stable
+    pull_policy: always
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"  # Branch, This ensures separate caches for separate branches
+    paths:
+      - .bazel_cache/
+      - .bazel_cache_user/
+#  artifacts:
+#    paths:
+#      - .bazel_cache/
+#      - .bazel_cache_user/
+#    expire_in: 2 days
+  script:
+    - make all-build
+  only:
+    - master

@@ -1,0 +1,16 @@
+load("//bazel_rules:pytest.bzl", "pytest_test")
+
+py_binary(
+    name = "project6",
+    srcs = glob(["src/*.py"]),
+    main = "src/main.py"
+)
+
+pytest_test(
+    name = "test",
+    srcs = glob(["**/*.py"]),
+    #srcs = [f for f in glob(["**/*.py"]) if "__init__.py" not in f],
+    deps = [
+        "project6"
+    ]
+)

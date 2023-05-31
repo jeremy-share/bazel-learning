@@ -1,0 +1,11 @@
+load("//bazel_rules:pylint.bzl", "pylint")
+
+py_binary(
+    name = "project2",
+    srcs = ["project2.py"],
+)
+
+pylint(
+    name = "lint",
+    srcs = ["project2.py"],
+)

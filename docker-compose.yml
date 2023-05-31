@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  bazel:
+    image: registry.gitlab.com/jeremy-share/bazel-learning/bazel_docker_container:stable
+    user: ${USER_ID:-0}:${GROUP_ID:-0}
+    volumes:
+      - ./:/project
+    working_dir: /project

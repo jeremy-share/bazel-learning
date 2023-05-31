@@ -1,0 +1,14 @@
+output
+bazel_docker_container
+.bazel_cache
+.idea
+.bazel_cache_user
+.bazel_rules-cache
+.bazel_rules-cache-user
+.ijwb
+bazel_rules-bazel_rules-learning
+bazel-bazel-learning
+bazel-bazel_learning
+bazel-bin
+bazel-out
+bazel-testlogs

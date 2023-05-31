@@ -1,0 +1,12 @@
+load("//bazel_rules:pylint.bzl", "pylint")
+
+py_binary(
+    name = "project4",
+    srcs = glob(["*.py"]),
+    main = "main.py"
+)
+
+pylint(
+    name = "lint",
+    srcs = glob(["*.py"]),
+)

@@ -1,0 +1,10 @@
+bazel-bazel-learning
+bazel-bin
+bazel-out
+bazel-testlogs
+/.bazel_cache
+/.bazel_cache_user
+/explain.log
+/bazel-bazel_learning
+/output
+/.ijwb

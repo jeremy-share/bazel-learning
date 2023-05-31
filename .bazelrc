@@ -1,0 +1,3 @@
+startup --output_user_root=.bazel_cache_user
+
+build --disk_cache=.bazel_cache
