@@ -1,7 +1,7 @@
 load("@rules_python//python:defs.bzl", "py_test")
 load("@pypi//:requirements.bzl", "requirement")
 
-def pytest_test(name, srcs, deps = [], args = [], data = [], **kwargs):
+def pytest_test(name, srcs, deps = [], args = [], **kwargs):
     py_test(
         name = name,
         srcs = [
@@ -13,13 +13,9 @@ def pytest_test(name, srcs, deps = [], args = [], data = [], **kwargs):
             "--capture=no",
             "--black",
             "--pylint",
-            # "--mypy",
-            "--pylint-ignore-patterns=.*test\\.runfiles/__init__\\.py$$",  # I am not sure what makes this file...
+            "--mypy",
             "-vvvv",
         ] + args + ["$(location :%s)" % x for x in srcs],
-        data = [
-            #"//tools/pytest_full:.pylintrc"
-        ] + data,
         deps = deps + [
             requirement("pytest"),
             requirement("pytest-black"),
