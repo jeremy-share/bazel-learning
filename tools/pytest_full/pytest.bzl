@@ -12,13 +12,13 @@ def pytest_test(name, srcs, deps = [], args = [], data = [], **kwargs):
         args = [
             "--capture=no",
             "--black",
-            # "--pylint",
+            "--pylint",
             # "--mypy",
-            "--pylint-rcfile=$(location //tools/pytest_full:.pylintrc)",
+            "--pylint-ignore-patterns=.*test\\.runfiles/__init__\\.py$$",  # I am not sure what makes this file...
             "-vvvv",
         ] + args + ["$(location :%s)" % x for x in srcs],
         data = [
-            "//tools/pytest_full:.pylintrc"
+            #"//tools/pytest_full:.pylintrc"
         ] + data,
         deps = deps + [
             requirement("pytest"),
