@@ -33,7 +33,7 @@ docker-compose-shell:
 shell:
 	make docker-compose-shell
 
-project-1-run:
+project1-run:
 	bazel run //project1:project1
 
 project5-unit-tests:

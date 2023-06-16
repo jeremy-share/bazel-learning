@@ -1,4 +1,4 @@
-load("//bazel_rules:pylint.bzl", "pylint")
+load("//tools/pylint:pylint.bzl", "pylint")
 
 py_binary(
     name = "project2",
