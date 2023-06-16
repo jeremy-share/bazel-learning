@@ -1,4 +1,4 @@
-load("//tools/pytest_full:pytest.bzl", "pytest_test")
+load("//tools/pytest_qa:pytest.bzl", "pytest_test")
 
 py_binary(
     name = "main",
@@ -8,6 +8,7 @@ py_binary(
 
 pytest_test(
     name = "test",
+    cov = "project7/src",
     srcs = glob(["**/*.py"]),
     deps = [
         ":main"

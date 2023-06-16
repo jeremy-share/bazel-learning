@@ -1,5 +1,4 @@
 exports_files([
     "pytest_wrapper.py",
-    "__init__.py",
-    ".pylintrc"
+    ".coveragerc",
 ])

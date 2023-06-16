@@ -19,7 +19,8 @@ This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * Project 3 - Using Globs (automation)
 * Project 4 - Renaming main entrypoint
 * Project 5 - Unittests
-* Project 6 - Pytest with Black (Pylint and Mypy are WIP)
+* Project 6 - Pytest
+* Project 7 - Pytest and QA tools
 
 ## Links / References:
 * https://bazel.build/
@@ -28,3 +29,8 @@ This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * https://stackoverflow.com/questions/58326587/how-do-i-use-pytest-with-bazel
 * https://dev.to/davidb31/experimentations-on-bazel-python-3-linter-pytest-49oh
 * https://stackoverflow.com/questions/61030216/how-to-disable-pytestdeprecationwarning-direct-construction-of-flake8item-has-b
+
+
+## TODO
+* autopep8
+* pytest-cov
