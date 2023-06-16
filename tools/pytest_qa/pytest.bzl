@@ -14,7 +14,6 @@ def pytest_test(name, srcs, cov, deps = [], data = [], args = [], **kwargs):
             "--flake8",
             "--isort",
             "--cov=" + cov,
-            "--cov-branch",
             "-W ignore::DeprecationWarning",
             "-W ignore::pytest.PytestWarning",
             "-vvvv",

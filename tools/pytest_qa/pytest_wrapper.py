@@ -2,17 +2,13 @@
 Runs a test file
 """
 import json
-import logging
 import sys
-# from os import getenv
 from os import getcwd
 
 import pytest
 
 if __name__ == "__main__":
-    # logging.basicConfig(level=getenv("LOGLEVEL", "INFO").upper())
-    logger = logging.getLogger(__name__)
-    logger.info("CWD=%s", getcwd())
+    print(f"INFO: CWD={getcwd()}")
     script = sys.argv[1:]
-    logger.info("pytest running '%s'", json.dumps(script, indent=2))
+    print(f"INFO: pytest running '{json.dumps(script, indent=2)}'")
     sys.exit(pytest.main(script))
