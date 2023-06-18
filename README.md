@@ -29,6 +29,7 @@ This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * https://stackoverflow.com/questions/58326587/how-do-i-use-pytest-with-bazel
 * https://dev.to/davidb31/experimentations-on-bazel-python-3-linter-pytest-49oh
 * https://stackoverflow.com/questions/61030216/how-to-disable-pytestdeprecationwarning-direct-construction-of-flake8item-has-b
+* https://github.com/bazelbuild/rules_python/issues/55
 
 
 ## TODO
