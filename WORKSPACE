@@ -21,7 +21,7 @@ load("@rules_python//python:pip.bzl", "pip_parse")
 
 pip_parse(
    name = "pypi",
-   requirements_lock = "//:requirements.txt",
+   requirements_lock = "//tools/pip:requirements.txt",
 )
 
 load("@pypi//:requirements.bzl", "install_deps")
