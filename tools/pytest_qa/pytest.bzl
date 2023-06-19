@@ -13,14 +13,13 @@ def pytest_test(name, srcs, cov, deps = [], data = [], args = [], **kwargs):
             "--mypy",
             "--flake8",
             "--isort",
-            "--cov=" + cov,
+            "--cov",
+            "--capture=no",
+            "--cov-config=$(location //tools/pytest_qa:.coveragerc)",
             "-W ignore::DeprecationWarning",
             "-W ignore::pytest.PytestWarning",
             "-vvvv",
         ] + args + ["$(location :%s)" % x for x in srcs],
-        env = {
-            "COVERAGE_RCFILE": "$(location //tools/pytest_qa:.coveragerc)"
-        },
         deps = deps + [
             requirement("pytest"),
             requirement("pytest-cov"),

@@ -1,0 +1,5 @@
+py_binary(
+    name = "main",
+    main = "project1.py",
+    srcs = ["project1.py"],
+)

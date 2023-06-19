@@ -1,12 +1,22 @@
-PROJECT_DIRS := $(shell  find . -type d -name "project*" | sed 's|./||g')
+run-all:
+	bazel run //projects/project1:main
+	bazel run //projects/project2:main
+	bazel run //projects/project3:main
+	bazel run //projects/project4:main
+	bazel run //projects/project5:main
+	bazel run //projects/project6:main
+	bazel run //projects/project7:main
 
-.PHONY: all-run $(PROJECT_DIRS)
+#qa-all:
+	# bazel test //projects/project2:lint
+	# bazel test //projects/project3:lint
+	# bazel test //projects/project4:lint
+	#bazel test //projects/project5:lint
+	#bazel run //projects/project5:unit-test
+	#bazel run //projects/project6:test
+	#bazel test //projects/project7:test
 
-# Runs all projects
-all-run: $(PROJECT_DIRS)
 
-$(PROJECT_DIRS):
-	-bazel run //$(notdir $@):$(notdir $@)
 
 #bazel-debug:
 #	which pylint
@@ -34,13 +44,13 @@ shell:
 	make docker-compose-shell
 
 project1-run:
-	bazel run //project1:project1
+	bazel run //projects/project1:main
 
 project5-unit-tests:
-	bazel run //project5:unit-tests
+	bazel run //projects/project5:unit-tests
 
 project6-unit-tests:
-	bazel run //project6:unit-tests
+	bazel run //projects/project6:unit-tests
 
 all-build:
 	bazel build //...

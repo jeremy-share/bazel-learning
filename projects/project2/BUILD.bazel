@@ -1,7 +1,8 @@
-load("//tools/pylint:pylint.bzl", "pylint")
+load("//tools/pylint_system:pylint.bzl", "pylint")
 
 py_binary(
-    name = "project2",
+    name = "main",
+    main = "project2.py",
     srcs = ["project2.py"],
 )
 

@@ -12,6 +12,8 @@ This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * The Ubuntu apt version of Bazel is too old!
 * Have a look at [.bazelversion](.bazelversion) for the version of Bazel used
 * The [Makefile](Makefile) contains some useful commands for example `make all-run` and `make all-build`
+* While the `pytest-{{tool}}` seem to be a good idea, they do not work well as some can not source the QA config.
+  * This is because the Bazel working directory is different to the project directory
 
 ## Projects:
 * Project 1 - Simple Python project
@@ -30,6 +32,8 @@ This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * https://dev.to/davidb31/experimentations-on-bazel-python-3-linter-pytest-49oh
 * https://stackoverflow.com/questions/61030216/how-to-disable-pytestdeprecationwarning-direct-construction-of-flake8item-has-b
 * https://github.com/bazelbuild/rules_python/issues/55
+* https://github.com/jessecureton/python_bazel_template
+* https://stackoverflow.com/questions/58253616/how-to-write-a-bazel-test-rule-using-a-provided-tool-rather-than-a-rule-built-on
 
 
 ## TODO

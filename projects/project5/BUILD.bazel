@@ -1,9 +1,9 @@
-load("//bazel_rules:pylint.bzl", "pylint")
+load("//tools/system-pylint:pylint.bzl", "pylint")
 load("@rules_python//python:defs.bzl", "py_test")
 
 
 py_binary(
-    name = "project5",
+    name = "main",
     srcs = glob(["src/*.py"]),
     main = "src/main.py"
 )

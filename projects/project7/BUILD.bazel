@@ -8,7 +8,7 @@ py_binary(
 
 pytest_test(
     name = "test",
-    cov = "project7/src",
+    cov = "projects.project7/src",
     srcs = glob(["**/*.py"]),
     deps = [
         ":main"

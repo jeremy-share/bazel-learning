@@ -1,5 +1,5 @@
 [run]
-relative_files = True
+omit = *external*
 
 [report]
-relative_files = True
+show_missing = true

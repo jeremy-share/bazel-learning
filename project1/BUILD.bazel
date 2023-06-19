@@ -1,4 +1,0 @@
-py_binary(
-    name = "project1",
-    srcs = ["project1.py"],
-)
