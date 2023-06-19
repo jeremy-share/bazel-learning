@@ -1,5 +1,0 @@
-[run]
-omit = *external*
-
-[report]
-show_missing = true

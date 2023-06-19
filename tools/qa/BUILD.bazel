@@ -1,0 +1,8 @@
+exports_files([
+    "wrapper_black.py",
+    "wrapper_flake8.py",
+    "wrapper_isort.py",
+    "wrapper_mypy.py",
+    "wrapper_pylint.py",
+    "multi_qa.sh"
+])

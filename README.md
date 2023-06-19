@@ -34,7 +34,10 @@ This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * https://github.com/bazelbuild/rules_python/issues/55
 * https://github.com/jessecureton/python_bazel_template
 * https://stackoverflow.com/questions/58253616/how-to-write-a-bazel-test-rule-using-a-provided-tool-rather-than-a-rule-built-on
+* https://stackoverflow.com/questions/47303847/best-way-to-configure-pylint-with-bazel
 
+## Old Links / References
+* https://stackoverflow.com/questions/61743089/python-testing-with-flake8-and-pytest-results-in-attributeerror-application-o
 
 ## TODO
 * autopep8
