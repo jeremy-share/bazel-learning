@@ -34,6 +34,6 @@ build_bazel_project:
 #      - .bazel_cache_user/
 #    expire_in: 2 days
   script:
-    - make all-build
+    - make all-test
   only:
     - master

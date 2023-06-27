@@ -1,4 +1,4 @@
-run-all:
+all-run:
 	bazel run //projects/project1:main
 	bazel run //projects/project2:main
 	bazel run //projects/project3:main
@@ -9,6 +9,9 @@ run-all:
 
 all-test:
 	bazel test //...
+
+all-test-manual:
+# Example
 	# bazel test //projects/project2:lint
 	# bazel test //projects/project3:lint
 	# bazel test //projects/project4:lint

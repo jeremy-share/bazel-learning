@@ -5,5 +5,5 @@ exports_files([
     "wrapper_isort.py",
     "wrapper_mypy.py",
     "wrapper_pylint.py",
-    "multi_qa.sh"
+    "wrapper_pytest.py",
 ])

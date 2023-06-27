@@ -1,4 +1,3 @@
-load("//tools/system-pylint:pylint.bzl", "pylint")
 load("@rules_python//python:defs.bzl", "py_test")
 
 
@@ -8,16 +7,11 @@ py_binary(
     main = "src/main.py"
 )
 
-pylint(
-    name = "lint",
-    srcs = glob(["src/*.py", "tests/*.py"]),
-)
-
 py_test(
     name = "unit-tests",
     srcs = ["tests/test_main.py"],
     main = "tests/test_main.py",
     deps = [
-        "project5"
+        ":main"
     ],
 )

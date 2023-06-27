@@ -2,7 +2,7 @@
 
 This repository is what I did to learn Bazel. It's shared in the hope it will be useful to someone, and it might not be 
 following best practices, etc., so please check out the links section below.
-I have also tried to introduce complexity iteratively through the projects.
+I have also tried to introduce complexity iteratively through the services.
 
 ## Setup
 This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
@@ -15,14 +15,11 @@ This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * While the `pytest-{{tool}}` seem to be a good idea, they do not work well as some can not source the QA config.
   * This is because the Bazel working directory is different to the project directory
 
-## Projects:
-* Project 1 - Simple Python project
-* Project 2 - Custom command (Pylint)
-* Project 3 - Using Globs (automation)
-* Project 4 - Renaming main entrypoint
-* Project 5 - Unittests
-* Project 6 - Pytest
-* Project 7 - Pytest and QA tools
+## Services:
+* Service 1 - Simple Python project
+* Service 2 - Copy of service 1 with glob of sources and Unittests
+* Service 3 - Copy of service 2 with Pytest (instead of Unittests)
+* Service 4 - Copy of service 3 with autopep8, black, flake8, isort, mypy, pylint
 
 ## Links / References:
 * https://bazel.build/

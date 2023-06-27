@@ -1,11 +1,11 @@
 """
 Main test file
 """
-from project7.src.main import hello
+from services.service3.src.main import hello
 
 
 def test_main():
     """
     Ensure the main function works as expected
     """
-    assert hello() == "Hello from Project 7 !!!!!!!"
+    assert hello() == "Hello from service 3 !!!"

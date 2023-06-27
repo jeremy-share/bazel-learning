@@ -3,7 +3,7 @@ Main test file
 """
 import unittest
 
-from project5.src.main import hello
+from services.service2.src.main import hello
 
 
 class TestMain(unittest.TestCase):
@@ -15,7 +15,7 @@ class TestMain(unittest.TestCase):
         """
         Ensure the main function works as expected
         """
-        self.assertEqual(hello(), "Hello from Project 5 !!!!!")
+        self.assertEqual(hello(), "Hello from service 2 !!")
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-load("//tools/pytest:pytest.bzl", "pytest_test")
+load("//tools/qa:qa.bzl", "pytest_test")
 
 py_binary(
     name = "main",
