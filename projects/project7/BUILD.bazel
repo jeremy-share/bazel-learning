@@ -1,5 +1,5 @@
-load("//tools/pytest_qa:pytest.bzl", "pytest_test")
-load("//tools/qa:qa.bzl", "black", "flake8", "isort", "mypy", "pylint")
+load("//tools/pytest:pytest.bzl", "pytest_test")
+load("//tools/qa:qa.bzl", "autopep8", "black", "flake8", "isort", "mypy", "pylint")
 
 py_binary(
     name = "main",
@@ -9,11 +9,19 @@ py_binary(
 
 pytest_test(
     name = "test",
-    cov = "projects.project7/src",
+    # cov = "projects.project7/src",
     srcs = glob(["**/*.py"]),
     deps = [
         ":main"
     ]
+)
+
+autopep8(
+    name = "autopep8",
+    srcs = glob(["**/*.py"]),
+    deps = [
+        ":main"
+    ],
 )
 
 black(

@@ -7,7 +7,8 @@ run-all:
 	bazel run //projects/project6:main
 	bazel run //projects/project7:main
 
-#qa-all:
+all-test:
+	bazel test //...
 	# bazel test //projects/project2:lint
 	# bazel test //projects/project3:lint
 	# bazel test //projects/project4:lint
@@ -15,8 +16,6 @@ run-all:
 	#bazel run //projects/project5:unit-test
 	#bazel run //projects/project6:test
 	#bazel test //projects/project7:test
-
-
 
 #bazel-debug:
 #	which pylint

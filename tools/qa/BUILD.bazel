@@ -1,4 +1,5 @@
 exports_files([
+    "wrapper_autopep8.py",
     "wrapper_black.py",
     "wrapper_flake8.py",
     "wrapper_isort.py",
