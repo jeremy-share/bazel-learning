@@ -2,14 +2,14 @@ load("//tools/qa:qa.bzl", "standard_qa")
 
 py_binary(
     name = "main",
-    srcs = glob(["src/*.py"]),
-    main = "src/main.py"
+    srcs = glob(include = ["*.py", "**/*.py"], exclude = ["test/*.py", "test/**/*.py"]),
+    main = "main.py"
 )
 
 standard_qa(
     srcs = glob(["*.py", "**/*.py"]),
-    cov = ["service5.src"],
-    cov_min = 80,
+    cov = ["services.service5.src"],
+    cov_min = 100,
     size = "small",
 #    pylint_kwargs = {
 #        "args": [

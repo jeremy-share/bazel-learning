@@ -1,7 +1,7 @@
 """
 Main test file
 """
-from ..src.main import hello
+from services.service5.src.hi import hello
 
 
 def test_main() -> None:

@@ -31,6 +31,7 @@ def black(name, srcs, args = [], **kwargs):
     args = [
         "--line-length=" + MAX_LINE_LENGTH,
         "--check",
+        "--diff",
     ] + args
     qa_wrapper(tool="black", name=name, srcs=srcs, args=args, **kwargs)
 
