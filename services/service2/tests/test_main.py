@@ -11,7 +11,7 @@ class TestMain(unittest.TestCase):
     Main test case
     """
 
-    def test_main(self):
+    def test_main(self) -> None:
         """
         Ensure the main function works as expected
         """

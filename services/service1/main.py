@@ -1,5 +1,5 @@
 """
-Sample project
+Sample service
 """
 
 SERVICE = 1

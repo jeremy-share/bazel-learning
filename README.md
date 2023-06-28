@@ -5,7 +5,7 @@ following best practices, etc., so please check out the links section below.
 I have also tried to introduce complexity iteratively through the services.
 
 ## Setup
-This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
+This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 
 ## Notes
 * One of the most challenging things was the Bazel cache and getting it to persist between pipeline builds. Checkout [.bazelrc](.bazelrc) for details
@@ -13,10 +13,10 @@ This project works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * Have a look at [.bazelversion](.bazelversion) for the version of Bazel used
 * The [Makefile](Makefile) contains some useful commands for example `make all-run` and `make all-build`
 * While the `pytest-{{tool}}` seem to be a good idea, they do not work well as some can not source the QA config.
-  * This is because the Bazel working directory is different to the project directory
+  * This is because the Bazel working directory is different to the service directory
 
 ## Services:
-* Service 1 - Simple Python project
+* Service 1 - Simple Python service
 * Service 2 - Copy of service 1 with glob of sources and Unittests
 * Service 3 - Copy of service 2 with Pytest (instead of Unittests)
 * Service 4 - Copy of service 3 with autopep8, black, flake8, isort, mypy, pylint

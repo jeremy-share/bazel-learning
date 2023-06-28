@@ -8,7 +8,7 @@ py_binary(
 
 pytest_test(
     name = "test",
-    # cov = "projects.project7/src",
+    # cov = "services/service4/src",
     srcs = glob(["**/*.py"]),
     deps = [
         ":main"
@@ -51,11 +51,10 @@ isort(
 #    ]
 )
 
-# TODO: Fix
-#mypy(
-#    name = "mypy",
-#    srcs = glob(["**/*.py"])
-#)
+mypy(
+    name = "mypy",
+    srcs = glob(["**/*.py"]),
+)
 
 pylint(
     name = "pylint",
