@@ -17,9 +17,10 @@ This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 
 ## Services:
 * Service 1 - Simple Python service
-* Service 2 - Copy of service 1 with glob of sources and Unittests
-* Service 3 - Copy of service 2 with Pytest (instead of Unittests)
-* Service 4 - Copy of service 3 with autopep8, black, flake8, isort, mypy, pylint
+* Service 2 - Copy of previous service with glob of sources and Unittests
+* Service 3 - Copy of previous service with Pytest (instead of Unittests)
+* Service 4 - Copy of previous service with autopep8, black, flake8, isort, mypy, pylint
+* Service 5 - Copy of previous service but simplified
 
 ## Links / References:
 * https://bazel.build/

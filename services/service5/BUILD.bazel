@@ -1,0 +1,16 @@
+load("//tools/qa:qa.bzl", "standard_qa")
+
+py_binary(
+    name = "main",
+    srcs = glob(["src/*.py"]),
+    main = "src/main.py"
+)
+
+standard_qa(
+    srcs = glob(["**/*.py"]),
+#    pylint_kwargs = {
+#        "args": [
+#            "--max-line-length=10"
+#        ]
+#    }
+)

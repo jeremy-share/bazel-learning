@@ -3,6 +3,7 @@ all-run:
 	bazel run //services/service2:main
 	bazel run //services/service3:main
 	bazel run //services/service4:main
+	bazel run //services/service5:main
 
 all-test:
 	bazel test //...
