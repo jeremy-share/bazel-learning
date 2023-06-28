@@ -1,6 +1,8 @@
 load("@rules_python//python:defs.bzl", "py_test")
 load("@pypi//:requirements.bzl", "requirement")
 
+MAX_LINE_LENGTH="120"
+
 def qa_wrapper(name, tool, srcs, deps = [], args = [], **kwargs):
     py_test(
         name = name,
@@ -14,23 +16,36 @@ def qa_wrapper(name, tool, srcs, deps = [], args = [], **kwargs):
 def autopep8(name, srcs, args = [], **kwargs):
     args = [
         "--diff",
-        "--exit-code"
+        "--exit-code",
+        "--max-line-length=" + MAX_LINE_LENGTH,
     ] + args
-    qa_wrapper(name=name, tool="autopep8", srcs=srcs, args=args, **kwargs)
+    qa_wrapper(tool="autopep8", name=name, srcs=srcs, args=args, **kwargs)
 
-def black(name, srcs, **kwargs):
-    qa_wrapper(name=name, tool="black", srcs=srcs, **kwargs)
+def black(name, srcs, args = [], **kwargs):
+    args = [
+        "--line-length=" + MAX_LINE_LENGTH,
+        "--check",
+    ] + args
+    qa_wrapper(tool="black", name=name, srcs=srcs, args=args, **kwargs)
 
-def flake8(name, srcs, **kwargs):
-    qa_wrapper(name=name, tool="flake8", srcs=srcs, **kwargs)
+def flake8(name, srcs, args = [], **kwargs):
+    args = [
+        "--max-line-length=" + MAX_LINE_LENGTH,
+    ] + args
+    qa_wrapper(tool="flake8", name=name, args=args, srcs=srcs, **kwargs)
 
 def isort(name, srcs, args = [], **kwargs):
     args = [
+        "--line-length=" + MAX_LINE_LENGTH,
         "--atomic",
         "--check-only",
-        "--py 39",
+        "--diff",
+        "--profile=black",
+        "--combine-as",
+        "--lines-after-imports=2",
+        "--multi-line=3",
     ] + args
-    qa_wrapper(name=name, tool="isort", srcs=srcs, args=args, **kwargs)
+    qa_wrapper(tool="isort", name=name, srcs=srcs, args=args, **kwargs)
 
 def mypy(name, srcs, args = [], **kwargs):
     args = [
@@ -38,17 +53,17 @@ def mypy(name, srcs, args = [], **kwargs):
         "--pretty",
         "--explicit-package-bases",  # I am not sure about this TODO: look into docs more
     ] + args
-    qa_wrapper(name=name, tool="mypy", srcs=srcs, args=args, **kwargs)
+    qa_wrapper(tool="mypy", name=name, srcs=srcs, args=args, **kwargs)
 
 def pylint(name, srcs, **kwargs):
-    qa_wrapper(name=name, tool="pylint", srcs=srcs, **kwargs)
+    qa_wrapper(tool="pylint", name=name, srcs=srcs, **kwargs)
 
 def pytest_test(name, srcs, args = [], **kwargs):
     args = [
         "--capture=no",
         "-vvv",
     ] + args
-    qa_wrapper(name=name, tool="pytest", srcs=srcs, args=args, **kwargs)
+    qa_wrapper(tool="pytest", name=name, srcs=srcs, args=args, **kwargs)
 
 def standard_qa(
     srcs,
