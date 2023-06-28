@@ -12,5 +12,6 @@ pytest_test(
     #srcs = [f for f in glob(["**/*.py"]) if "__init__.py" not in f],
     deps = [
         "main"
-    ]
+    ],
+    size = "small",
 )

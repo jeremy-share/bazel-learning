@@ -7,59 +7,46 @@ py_binary(
 )
 
 pytest_test(
-    name = "test",
-    # cov = "services/service4/src",
-    srcs = glob(["**/*.py"]),
-    deps = [
-        ":main"
-    ]
+    name = "unit",
+    srcs = glob(["*.py", "**/*.py"]),
+    cov = ["service4.src"],
+    cov_min = 80,
+    size = "small",
 )
 
 autopep8(
     name = "autopep8",
-    srcs = glob(["**/*.py"]),
-    deps = [
-        ":main"
-    ],
+    srcs = glob(["*.py", "**/*.py"]),
+    size = "small",
 )
 
 black(
     name = "black",
-    srcs = glob(["**/*.py"]),
-    deps = [
-        ":main"
-    ],
+    srcs = glob(["*.py", "**/*.py"]),
+    size = "small",
 )
 
 
 flake8(
     name = "flake8",
-    srcs = glob(["**/*.py"]),
-    deps = [
-        ":main"
-    ],
+    srcs = glob(["*.py", "**/*.py"]),
+    size = "small",
 )
 
 isort(
     name = "isort",
-    srcs = glob(["**/*.py"]),
-    deps = [
-        ":main"
-    ],
-#    args = [
-#        "--line-length=10"
-#    ]
+    srcs = glob(["*.py", "**/*.py"]),
+    size = "small",
 )
 
 mypy(
     name = "mypy",
-    srcs = glob(["**/*.py"]),
+    srcs = glob(["*.py", "**/*.py"]),
+    size = "small",
 )
 
 pylint(
     name = "pylint",
-    srcs = glob(["**/*.py"]),
-#    args = [
-#        "--max-line-length=10"
-#    ]
+    srcs = glob(["*.py", "**/*.py"]),
+    size = "small",
 )

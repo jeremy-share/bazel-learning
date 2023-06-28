@@ -7,7 +7,10 @@ py_binary(
 )
 
 standard_qa(
-    srcs = glob(["**/*.py"]),
+    srcs = glob(["*.py", "**/*.py"]),
+    cov = ["service5.src"],
+    cov_min = 80,
+    size = "small",
 #    pylint_kwargs = {
 #        "args": [
 #            "--max-line-length=10"

@@ -36,7 +36,3 @@ This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 
 ## Old Links / References
 * https://stackoverflow.com/questions/61743089/python-testing-with-flake8-and-pytest-results-in-attributeerror-application-o
-
-## TODO
-* autopep8
-* pytest-cov
