@@ -1,9 +1,9 @@
 all-run:
-	bazel run //services/service1:main
-	bazel run //services/service2:main
-	bazel run //services/service3:main
-	bazel run //services/service4:main
-	bazel run //services/service5:main
+	bazel run //projects/project1_service:main
+	bazel run //projects/project2_service:main
+	bazel run //projects/project3_service:main
+	bazel run //projects/project4_service:main
+	bazel run //projects/project5_service:main
 
 all-test:
 	bazel test //...

@@ -8,7 +8,7 @@ py_binary(
 
 standard_qa(
     srcs = glob(["*.py", "**/*.py"]),
-    cov = ["services.service5.src"],
+    cov = ["projects.project5_service.src"],
     cov_min = 100,
     size = "small",
 #    pylint_kwargs = {

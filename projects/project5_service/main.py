@@ -1,7 +1,7 @@
 """
 Sample service
 """
-from services.service5.src.hi import hello
+from projects.project5_service.src.hi import hello
 
 
 if __name__ == "__main__":

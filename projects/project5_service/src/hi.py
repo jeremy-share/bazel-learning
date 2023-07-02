@@ -1,7 +1,7 @@
 """
 Sample service
 """
-from services.service5.src.utils.text_generator import generate_service_id_text
+from projects.project5_service.src.utils.text_generator import generate_service_id_text
 
 
 SERVICE = 5

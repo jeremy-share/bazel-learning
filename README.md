@@ -2,7 +2,7 @@
 
 This repository is what I did to learn Bazel. It's shared in the hope it will be useful to someone, and it might not be 
 following best practices, etc., so please check out the links section below.
-I have also tried to introduce complexity iteratively through the services.
+I have also tried to introduce complexity iteratively through the projects.
 
 ## Setup
 This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
@@ -13,14 +13,14 @@ This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * Have a look at [.bazelversion](.bazelversion) for the version of Bazel used
 * The [Makefile](Makefile) contains some useful commands for example `make all-run` and `make all-build`
 * While the `pytest-{{tool}}` seem to be a good idea, they do not work well as some can not source the QA config.
-  * This is because the Bazel working directory is different to the service directory
+  * This is because the Bazel working directory is different to the project directory
 
-## Services:
-* Service 1 - Simple Python service
-* Service 2 - Copy of previous service with glob of sources and Unittests
-* Service 3 - Copy of previous service with Pytest (instead of Unittests)
-* Service 4 - Copy of previous service with autopep8, black, flake8, isort, mypy, pylint
-* Service 5 - Copy of previous service but simplified
+## Projects:
+* project1_service - Simple Python service
+* project2_service - Copy of previous service with glob of sources and Unittests
+* project3_service - Copy of previous service with Pytest (instead of Unittests)
+* project4_service - Copy of previous service with autopep8, black, flake8, isort, mypy, pylint
+* project5_service - Copy of previous service but simplified
 
 ## Links / References:
 * https://bazel.build/

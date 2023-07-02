@@ -9,7 +9,7 @@ py_binary(
 pytest_test(
     name = "unit",
     srcs = glob(["*.py", "**/*.py"]),
-    cov = ["service4.src"],
+    cov = ["project4_service.src"],
     cov_min = 80,
     size = "small",
 )

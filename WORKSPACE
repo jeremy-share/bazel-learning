@@ -2,7 +2,7 @@ workspace(
     name = "bazel_learning",
 )
 
-# === SERVICE 2 ONWARDS =====================================================
+# === PROJECT 2 ONWARDS =====================================================
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 

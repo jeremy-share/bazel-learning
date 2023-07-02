@@ -3,7 +3,7 @@ Main test file
 """
 import unittest
 
-from services.service2.src.main import hello
+from projects.project2_service.src.main import hello
 
 
 class TestMain(unittest.TestCase):
