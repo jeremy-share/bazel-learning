@@ -1,0 +1,28 @@
+load("//tools/qa:qa.bzl", "standard_qa")
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+
+deps = [
+    "//projects/project6_library:my_library"
+]
+
+py_binary(
+    name = "main",
+    srcs = glob(include = ["*.py", "**/*.py"], exclude = ["test/*.py", "test/**/*.py"]),
+    main = "main.py",
+    deps = deps
+)
+
+standard_qa(
+    srcs = glob(["*.py", "**/*.py"]),
+    cov = ["projects.project8_service.src"],
+    cov_min = 100,
+    size = "small",
+    deps = deps
+)
+
+container_image(
+    name = "docker",
+    base = "@python_base//image",
+    files = [":main"],
+    entrypoint = ["main.py"],
+)

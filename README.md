@@ -24,6 +24,7 @@ This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * project5_service - Copy of previous service but simplified
 * project6_library - A library with simplified QA
 * project7_service - Copy of project5_service but uses the library
+* project8_service - WIP Copy of project7_service but builds a Docker container
 
 ## Links / References:
 * https://bazel.build/

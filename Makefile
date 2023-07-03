@@ -5,6 +5,7 @@ all-run:
 	bazel run //projects/project4_service:main
 	bazel run //projects/project5_service:main
 	bazel run //projects/project7_service:main
+	bazel run //projects/project8_service:main
 
 all-test:
 	bazel test //...
