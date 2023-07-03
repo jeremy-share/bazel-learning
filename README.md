@@ -12,8 +12,9 @@ This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * The Ubuntu apt version of Bazel is too old!
 * Have a look at [.bazelversion](.bazelversion) for the version of Bazel used
 * The [Makefile](Makefile) contains some useful commands for example `make all-run` and `make all-build`
-* While the `pytest-{{tool}}` seem to be a good idea, they do not work well as some can not source the QA config.
-  * This is because the Bazel working directory is different to the project directory
+* While the `pytest-{{tool}}` packages looked to be good idea at the time, they did not work well.
+  * The Bazel working directory is different to the project directory.
+  * Some tools did not let you pass configuration through as arguments
 
 ## Projects:
 * project1_service - Simple Python service
@@ -21,6 +22,8 @@ This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 * project3_service - Copy of previous service with Pytest (instead of Unittests)
 * project4_service - Copy of previous service with autopep8, black, flake8, isort, mypy, pylint
 * project5_service - Copy of previous service but simplified
+* project6_library - A library with simplified QA
+* project7_service - Copy of project5_service but uses the library
 
 ## Links / References:
 * https://bazel.build/

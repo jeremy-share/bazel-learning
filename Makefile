@@ -4,12 +4,18 @@ all-run:
 	bazel run //projects/project3_service:main
 	bazel run //projects/project4_service:main
 	bazel run //projects/project5_service:main
+	bazel run //projects/project7_service:main
 
 all-test:
 	bazel test //...
 
 all-build:
 	bazel build //...
+
+all-validate:
+	make all-build
+	make all-test
+	make all-run
 
 all-build-explained:
 #--incompatible_strict_action_env
