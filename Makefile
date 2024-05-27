@@ -38,7 +38,7 @@ cleanup:
 	bazel clean --expunge
 
 docker-compose-shell:
-	USER_ID=`id -u` GROUP_ID=`id -g` docker-compose run --rm bazel bash
+	USER_ID=`id -u` GROUP_ID=`id -g` docker compose run --rm bazel bash
 
 shell:
 	make docker-compose-shell
