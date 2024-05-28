@@ -1,0 +1,16 @@
+load("@rules_python//python:defs.bzl", "py_test")
+
+
+py_binary(
+    name = "main",
+    srcs = glob(["src/*.py"]),
+    main = "src/main.py"
+)
+
+py_test(
+    name = "unit-tests",
+    srcs = ["tests/test_main.py"],
+    main = "tests/test_main.py",
+    deps = [":main"],
+    size = "small",
+)

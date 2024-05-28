@@ -9,13 +9,13 @@ venv-deactivate:
 	@echo "please run 'deactivate'"
 
 all-run:
-	bazel run //projects/project1_service:main
-	bazel run //projects/project2_service:main
-	bazel run //projects/project3_service:main
-	bazel run //projects/project4_service:main
-	bazel run //projects/project5_service:main
-	bazel run //projects/project7_service:main
-	bazel run //projects/project8_service:main
+	bazel run //projects/project1:main
+	bazel run //projects/project2:main
+	bazel run //projects/project3:main
+	bazel run //projects/project4:main
+	bazel run //projects/project5:main
+	bazel run //projects/project7:main
+	bazel run //projects/project8:main
 
 all-test:
 	bazel test //...

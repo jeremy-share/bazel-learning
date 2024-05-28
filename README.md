@@ -10,21 +10,23 @@ This repo works best with [Bazelisk](https://github.com/bazelbuild/bazelisk).
 ## Notes
 * One of the most challenging things was the Bazel cache and getting it to persist between pipeline builds. Checkout [.bazelrc](.bazelrc) for details
 * The Ubuntu apt version of Bazel is too old!
-* Have a look at [.bazelversion](.bazelversion) for the version of Bazel used
+* Have a look at [.bazeliskrc](.bazeliskrc) for the version of Bazel used
 * The [Makefile](Makefile) contains some useful commands for example `make all-run` and `make all-build`
 * While the `pytest-{{tool}}` packages looked to be good idea at the time, they did not work well.
   * The Bazel working directory is different to the project directory.
-  * Some tools did not let you pass configuration through as arguments
+  * Some tools did not let you pass configuration through as arguments.
 
 ## Projects:
-* project1_service - Simple Python service
-* project2_service - Copy of previous service with glob of sources and Unittests
-* project3_service - Copy of previous service with Pytest (instead of Unittests)
-* project4_service - Copy of previous service with autopep8, black, flake8, isort, mypy, pylint
-* project5_service - Copy of previous service but simplified
-* project6_library - A library with simplified QA
-* project7_service - Copy of project5_service but uses the library
-* project8_service - WIP Copy of project7_service but builds a Docker container
+| Project  | Description                                                                    |
+|----------|--------------------------------------------------------------------------------|
+| project1 | Simple Python application                                                      |
+| project2 | Copy of previous application with Unittests and glob of sources                |
+| project3 | Copy of previous application with Pytest (instead of Unittests)                |               
+| project4 | Copy of previous application with autopep8, black, flake8, isort, mypy, pylint | 
+| project5 | Copy of previous application but simplified                                    |
+| project6 | A library with simplified QA                                                   |
+| project7 | Copy of project5 but uses the library from project6                            |
+| project8 | WIP Copy of project7 but builds a Docker container                             |
 
 ## Links / References:
 * https://bazel.build/

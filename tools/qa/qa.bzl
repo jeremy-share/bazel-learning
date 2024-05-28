@@ -62,8 +62,11 @@ def mypy(name, srcs, args = [], **kwargs):
     ] + args
     qa_wrapper(tool="mypy", name=name, srcs=srcs, args=args, **kwargs)
 
-def pylint(name, srcs, **kwargs):
-    qa_wrapper(tool="pylint", name=name, srcs=srcs, **kwargs)
+def pylint(name, srcs, args = [], **kwargs):
+    base_args = [
+        "--disable=missing-module-docstring"
+    ]
+    qa_wrapper(tool="pylint", name=name, srcs=srcs, args=base_args + args, **kwargs)
 
 def pytest_test(name, srcs, cov = None, cov_min = None, cov_report = "term-missing", args = [], deps = [], **kwargs):
     base_args = [
