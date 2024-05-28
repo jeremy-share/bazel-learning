@@ -1,6 +1,13 @@
 which-bazel-python:
 	bazel run //:print_python_bin
 
+venv:
+	python3.10 -m venv .venv
+	@echo "please run 'source ./.venv/bin/activate'"
+
+venv-deactivate:
+	@echo "please run 'deactivate'"
+
 all-run:
 	bazel run //projects/project1_service:main
 	bazel run //projects/project2_service:main

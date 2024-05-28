@@ -8,3 +8,4 @@ bazel-testlogs
 /bazel-bazel_learning
 /output
 /.ijwb
+/.venv
