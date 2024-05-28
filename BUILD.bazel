@@ -1,0 +1,4 @@
+py_binary(
+    name = "print_python_bin",
+    srcs = ["print_python_bin.py"],
+)

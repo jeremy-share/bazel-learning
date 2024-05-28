@@ -1,3 +1,6 @@
+which-bazel-python:
+	bazel run //:print_python_bin
+
 all-run:
 	bazel run //projects/project1_service:main
 	bazel run //projects/project2_service:main
