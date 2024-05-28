@@ -1,4 +1,4 @@
-load("//tools/qa:qa.bzl", "pytest_test")
+load("//tools/pytest:pytest.bzl", "pytest_test")
 
 py_binary(
     name = "main",
@@ -8,10 +8,7 @@ py_binary(
 
 pytest_test(
     name = "test",
-    srcs = glob(["**/*.py"]),
-    #srcs = [f for f in glob(["**/*.py"]) if "__init__.py" not in f],
-    deps = [
-        "main"
-    ],
+    srcs = glob(["tests/*.py"]),
+    deps = [":main"],
     size = "small",
 )

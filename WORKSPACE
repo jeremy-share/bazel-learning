@@ -17,6 +17,8 @@ load("@rules_python//python:repositories.bzl", "py_repositories")
 
 py_repositories()
 
+# === PROJECT 3 ONWARDS =====================================================
+
 load("@rules_python//python:pip.bzl", "pip_parse")
 
 pip_parse(
