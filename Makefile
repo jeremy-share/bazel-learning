@@ -3,6 +3,7 @@ which-bazel-python:
 
 venv:
 	python3.10 -m venv .venv
+	./.venv/bin/pip3 install -r tools/pip/requirements.txt
 	@echo "please run 'source ./.venv/bin/activate'"
 
 venv-deactivate:
@@ -54,4 +55,4 @@ shell:
 	make docker-compose-shell
 
 requirements_lock:
-	bazel run //:requirements.update
+	bazel run //tools/pip:requirements.update
